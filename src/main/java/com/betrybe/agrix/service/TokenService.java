@@ -20,7 +20,7 @@ public class TokenService {
    *
    * @param secret the secret
    */
-  public TokenService(@Value("${api.security.token.secret}") String secret) {
+  public TokenService(@Value("{api.security.token.secret}") String secret) {
     this.algorithm = Algorithm.HMAC256(secret);
   }
 

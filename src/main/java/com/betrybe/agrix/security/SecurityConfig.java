@@ -28,9 +28,10 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableMethodSecurity(securedEnabled = true)
 public class SecurityConfig {
 
-  @Autowired
+
   private final JwtFilter jwtFilter;
 
+  @Autowired
   public SecurityConfig(JwtFilter jwtFilter) {
     this.jwtFilter = jwtFilter;
   }
@@ -51,7 +52,7 @@ public class SecurityConfig {
         ).authorizeHttpRequests(authorize -> authorize
             .requestMatchers(HttpMethod.POST, "/persons").permitAll()
             .requestMatchers(HttpMethod.POST, "/auth/login").permitAll()
-            .requestMatchers(toH2Console()).permitAll()
+            .anyRequest().authenticated()
         ).addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
         .build();
   }
