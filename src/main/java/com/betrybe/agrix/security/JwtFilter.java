@@ -14,12 +14,21 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
+/**
+ * The type Jwt filter.
+ */
 @Component
 public class JwtFilter extends OncePerRequestFilter {
 
   private final TokenService tokenService;
   private final PersonService personService;
 
+  /**
+   * Instantiates a new Jwt filter.
+   *
+   * @param tokenService  the token service
+   * @param personService the person service
+   */
   public JwtFilter(TokenService tokenService, PersonService personService) {
     this.tokenService = tokenService;
     this.personService = personService;
@@ -42,11 +51,11 @@ public class JwtFilter extends OncePerRequestFilter {
   }
 
   private Optional<String> extractToken(HttpServletRequest request) {
-    String AuthHeader = request.getHeader("Authorization");
-    if (AuthHeader == null || AuthHeader.isBlank() || !AuthHeader.startsWith("Bearer ")) {
+    String authHeader = request.getHeader("Authorization");
+    if (authHeader == null || authHeader.isBlank() || !authHeader.startsWith("Bearer ")) {
       return Optional.empty();
     }
-    return Optional.of(AuthHeader.substring(7));
+    return Optional.of(authHeader.substring(7));
   }
 }
 
