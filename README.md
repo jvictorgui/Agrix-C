@@ -1,10 +1,28 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+# Como executar o projeto
+
+## Pré-requisitos:
+
+* Ter o Git instalado
+* Ter o Java instalado e configurado
+* Ter o Maven instalado
+
+## Passos:
+
+**1. Clone ou baixe o repositório:**
+
+git clone git@github.com:jvictorgui/Agrix-C.git
+
+
+**2. Entre no diretório:**
+
+cd project-agrix-java-fase-c
+
+
+**3. Instale as dependências:**
+
+mvn install -DskipTests
+
+
+**4. Execute a aplicação:**
+
+ Executar a Classe Principal (AgrixApplication.java)
