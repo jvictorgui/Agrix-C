@@ -1,3 +1,14 @@
+# Apresentação do Projeto
+
+
+O projeto consiste em uma **API RESTful** completa para gerenciamento de fazendas, plantações, fertilizantes e usuários, desenvolvida com o framework **Spring Boot**. A API fornece recursos para:
+
+* **Gerenciamento de Fazendas:** Criação, consulta, atualização e exclusão de fazendas, com controle de acesso baseado em roles de usuário.
+* **Gerenciamento de Plantações:** Criação, consulta, atualização e exclusão de plantações, com associação a fazendas específicas.
+* **Gerenciamento de Fertilizantes:** Criação, consulta, atualização e exclusão de fertilizantes, com associação a plantações específicas.
+* **Gerenciamento de Usuários:** Criação, consulta, atualização e exclusão de usuários, com controle de acesso e diferentes níveis de permissão.
+
+
 # Como executar o projeto
 
 ## Pré-requisitos:
